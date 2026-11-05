@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-navy: #0c1b30;
-  --color-navy-deep: #07111e;
-  --color-ink: #1c1814;
-  --color-cream: #f3eee6;
-  --color-paper: #faf7f2;
-  --color-gold: #b8956c;
-  --color-gold-soft: #e4d3b8;
-  --color-line: #d9d0c3;
+  --color-navy: #0a1628;
+  --color-navy-deep: #050d18;
+  --color-ink: #1a1612;
+  --color-cream: #f4efe6;
+  --color-paper: #f7f3ec;
+  --color-gold: #c6a56a;
+  --color-gold-soft: #e7d7b8;
+  --color-line: #e0d6c8;
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
 }
@@ -27,36 +27,22 @@ body {
   font-family: var(--font-serif), Georgia, serif;
 }
 
-.still-road {
-  background:
-    radial-gradient(120% 80% at 70% 20%, rgb(184 149 108 / 35%), transparent 55%),
-    linear-gradient(165deg, #16304f 0%, #0c1b30 42%, #1a140f 100%);
+::selection {
+  background: #c6a56a;
+  color: #050d18;
 }
 
-.still-window {
-  background:
-    linear-gradient(180deg, rgb(250 247 242 / 0%) 0%, rgb(12 27 48 / 35%) 100%),
-    repeating-linear-gradient(90deg, #d8c7aa 0 14%, #c4b092 14% 16%, #efe4d2 16% 34%, #c9b597 34% 36%),
-    #e7dccb;
+@media (prefers-reduced-motion: no-preference) {
+  .hero-drift {
+    animation: hero-drift 22s ease-out both;
+  }
 }
 
-.still-field {
-  background:
-    linear-gradient(180deg, #1d334c 0%, #1d334c 42%, #6d7a4e 42%, #3e4a32 100%);
-}
-
-.still-porch {
-  background:
-    linear-gradient(115deg, #10243c 0%, #10243c 38%, #cbb89a 38%, #a89070 100%);
-}
-
-.still-river {
-  background:
-    radial-gradient(80% 50% at 50% 80%, rgb(184 149 108 / 40%), transparent 60%),
-    linear-gradient(200deg, #0e2744, #16385a 40%, #0c1b30 100%);
-}
-
-.still-hall {
-  background:
-    linear-gradient(90deg, #0c1b30 0 18%, #1a304c 18% 22%, #efe6da 22% 78%, #1a304c 78% 82%, #0c1b30 82% 100%);
+@keyframes hero-drift {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
 }

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { PageHero } from "@/components/PageHero";
 import { StoryBrowser } from "@/components/StoryBrowser";
+import { gallery } from "@/lib/images";
 import { stories } from "@/lib/stories";
 
 export const metadata: Metadata = {
@@ -9,15 +11,16 @@ export const metadata: Metadata = {
 
 export default function StoriesPage() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-14">
-      <p className="text-xs uppercase tracking-[0.2em] text-gold">Their Stories</p>
-      <h1 className="mt-3 max-w-3xl font-serif text-5xl text-navy">Six sample interviews</h1>
-      <p className="mt-4 max-w-2xl text-lg leading-8 text-ink/75">
-        Filter for wounded officers or surviving families. Each card opens a player, a short biography, the story, and a sample transcript.
-      </p>
-      <div className="mt-8">
+    <main>
+      <PageHero
+        kicker="Their Stories"
+        title="Six sample interviews"
+        lede="Filter for wounded officers or surviving families. Each film opens a player, a short biography, the story, and a sample transcript."
+        frame={gallery.interview}
+      />
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <StoryBrowser stories={stories} />
-      </div>
+      </section>
     </main>
   );
 }

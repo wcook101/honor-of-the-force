@@ -16,10 +16,10 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-20 border-b border-white/10 bg-navy/95 text-cream backdrop-blur">
+    <header className="sticky top-0 z-30 border-b border-gold/30 bg-navy/95 text-cream backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
         <Link href="/" className="min-w-0" onClick={() => setOpen(false)}>
-          <span className="block text-[0.65rem] uppercase tracking-[0.22em] text-gold">Documentary</span>
+          <span className="block text-[0.65rem] uppercase tracking-[0.28em] text-gold">Documentary</span>
           <span className="font-serif text-xl leading-none sm:text-2xl">Honor of the Force</span>
         </Link>
         <button

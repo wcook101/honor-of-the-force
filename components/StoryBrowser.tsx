@@ -16,25 +16,28 @@ export function StoryBrowser({ stories }: { stories: Story[] }) {
 
   return (
     <div>
-      <div className="flex flex-wrap gap-2" role="group" aria-label="Filter interviews">
-        {filters.map((item) => (
-          <button
-            key={item.id}
-            type="button"
-            aria-pressed={filter === item.id}
-            className={`rounded-full px-4 py-2 text-sm ${
-              filter === item.id ? "bg-navy text-cream" : "border border-line bg-white text-navy"
-            }`}
-            onClick={() => setFilter(item.id)}
-          >
-            {item.label}
-          </button>
-        ))}
+      <div className="flex flex-wrap gap-x-6 gap-y-2 border-b border-line" role="group" aria-label="Filter interviews">
+        {filters.map((item) => {
+          const active = filter === item.id;
+          return (
+            <button
+              key={item.id}
+              type="button"
+              aria-pressed={active}
+              className={`-mb-px border-b-2 px-1 py-3 text-sm tracking-wide ${
+                active ? "border-gold text-navy" : "border-transparent text-ink/55 hover:text-navy"
+              }`}
+              onClick={() => setFilter(item.id)}
+            >
+              {item.label}
+            </button>
+          );
+        })}
       </div>
-      <p className="mt-4 text-sm text-ink/70">
-        {shown.length} sample {shown.length === 1 ? "interview" : "interviews"}
+      <p className="mt-6 text-sm text-ink/70">
+        {shown.length} fictional {shown.length === 1 ? "interview" : "interviews"}
       </p>
-      <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
         {shown.map((story) => (
           <StoryCard key={story.slug} story={story} />
         ))}
