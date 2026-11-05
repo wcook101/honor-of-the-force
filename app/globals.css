@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-navy: #0c1b30;
+  --color-navy-deep: #07111e;
+  --color-ink: #1c1814;
+  --color-cream: #f3eee6;
+  --color-paper: #faf7f2;
+  --color-gold: #b8956c;
+  --color-gold-soft: #e4d3b8;
+  --color-line: #d9d0c3;
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans), "Segoe UI", sans-serif;
+}
+
+.font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.still-road {
+  background:
+    radial-gradient(120% 80% at 70% 20%, rgb(184 149 108 / 35%), transparent 55%),
+    linear-gradient(165deg, #16304f 0%, #0c1b30 42%, #1a140f 100%);
+}
+
+.still-window {
+  background:
+    linear-gradient(180deg, rgb(250 247 242 / 0%) 0%, rgb(12 27 48 / 35%) 100%),
+    repeating-linear-gradient(90deg, #d8c7aa 0 14%, #c4b092 14% 16%, #efe4d2 16% 34%, #c9b597 34% 36%),
+    #e7dccb;
+}
+
+.still-field {
+  background:
+    linear-gradient(180deg, #1d334c 0%, #1d334c 42%, #6d7a4e 42%, #3e4a32 100%);
+}
+
+.still-porch {
+  background:
+    linear-gradient(115deg, #10243c 0%, #10243c 38%, #cbb89a 38%, #a89070 100%);
+}
+
+.still-river {
+  background:
+    radial-gradient(80% 50% at 50% 80%, rgb(184 149 108 / 40%), transparent 60%),
+    linear-gradient(200deg, #0e2744, #16385a 40%, #0c1b30 100%);
+}
+
+.still-hall {
+  background:
+    linear-gradient(90deg, #0c1b30 0 18%, #1a304c 18% 22%, #efe6da 22% 78%, #1a304c 78% 82%, #0c1b30 82% 100%);
 }
