@@ -24,6 +24,14 @@ export const gallery = {
     credit: "Raymond Wambsgans / CC BY-SA 2.0",
     position: "object-[center_58%]",
   },
+  pspRoad: {
+    src: "/images/psp-campus.jpg",
+    alt: `${note} A Pennsylvania State Police vehicle on patrol at Pennsylvania State University in College Township. The people shown are not in these samples.`,
+    credit: "Famartin",
+    position: "object-cover object-[58%_46%] md:object-[56%_50%]",
+    sourceHref: "https://commons.wikimedia.org/wiki/File:2025-08-30_11_13_29_A_Pennsylvania_State_Trooper_car_on_patrol_before_a_football_game_at_Pennsylvania_State_University_in_College_Township,_Centre_County,_Pennsylvania.jpg",
+    license: { name: "CC BY-SA 4.0", href: "https://creativecommons.org/licenses/by-sa/4.0" },
+  },
   pspRural: {
     src: "/images/psp-rural-taurus.jpg",
     alt: `${note} A marked Pennsylvania State Police sedan beside pasture and a split-rail fence in Pennsylvania.`,
