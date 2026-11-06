@@ -14,14 +14,14 @@ export default function HomePage() {
     <main>
       <section className="relative isolate min-h-[100svh] overflow-hidden bg-navy text-cream">
         <Image
-          src={gallery.patrol.src}
-          alt={gallery.patrol.alt}
+          src={gallery.psp.src}
+          alt={gallery.psp.alt}
           fill
           priority
           sizes="100vw"
-          className={`hero-drift object-cover brightness-110 ${gallery.patrol.position}`}
+          className="hero-drift object-cover object-[74%_center] md:object-[center_58%]"
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-navy-deep/35 via-50% to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-deep/70 via-navy-deep/25 via-42% to-transparent" />
         <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-end px-4 pb-16 pt-28 sm:pb-20">
           <p className="text-xs uppercase tracking-[0.34em] text-gold [text-shadow:0_1px_10px_rgb(5_13_24/0.8)]">Honor of the Force</p>
           <div className="mt-5 h-px w-16 bg-gold" />
@@ -42,8 +42,16 @@ export default function HomePage() {
               Remembering the Fallen
             </Link>
           </div>
-          <p className="mt-8 max-w-md text-[0.68rem] uppercase leading-5 tracking-[0.16em] text-gold-soft/90">
-            Illustrative photograph · {gallery.patrol.credit} · Not an officer from these samples
+          <p className="mt-8 max-w-xl text-[0.68rem] uppercase leading-5 tracking-[0.14em] text-gold-soft/90">
+            Illustrative photograph ·{" "}
+            <a className="underline decoration-gold/50 underline-offset-2" href="https://commons.wikimedia.org/wiki/File:Pennsylvania_State_Police_Ford_Interceptor_Utility.jpg">
+              Raymond Wambsgans
+            </a>
+            {" · "}
+            <a className="underline decoration-gold/50 underline-offset-2" href="https://creativecommons.org/licenses/by-sa/2.0/">
+              CC BY-SA 2.0
+            </a>
+            {" · Not an officer from these samples"}
           </p>
         </div>
       </section>

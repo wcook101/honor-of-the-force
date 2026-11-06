@@ -16,6 +16,12 @@ export const gallery = {
     credit: "Kindel Media / Pexels",
     position: "object-[center_62%]",
   },
+  psp: {
+    src: "/images/psp-utility.jpg",
+    alt: `${note} A marked Pennsylvania State Police vehicle. The photograph is not a portrait of anyone in these samples.`,
+    credit: "Raymond Wambsgans / CC BY-SA 2.0",
+    position: "object-[center_58%]",
+  },
   desert: {
     src: "/images/desert-road.jpg",
     alt: `${note} A highway crossing open country at sunset.`,
