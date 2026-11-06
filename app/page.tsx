@@ -12,17 +12,26 @@ export default function HomePage() {
 
   return (
     <main>
-      <section className="relative isolate grid overflow-hidden bg-navy-deep text-cream md:h-[70vh] md:max-h-[750px] md:grid-cols-[minmax(0,1.35fr)_minmax(0,0.9fr)]">
-        <div className="order-2 flex flex-col justify-center px-4 py-10 sm:px-6 md:order-1 md:py-12 lg:px-10">
-          <p className="text-xs uppercase tracking-[0.34em] text-gold">Honor of the Force</p>
+      <section className="relative isolate min-h-[85svh] overflow-hidden bg-navy text-cream">
+        <Image
+          src={gallery.psp.src}
+          alt={gallery.psp.alt}
+          fill
+          priority
+          sizes="100vw"
+          className="hero-drift object-cover object-[74%_center] md:object-[center_58%]"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-navy-deep/75 via-navy-deep/28 via-42% to-transparent" />
+        <div className="relative z-10 mx-auto flex min-h-[85svh] max-w-6xl flex-col justify-end px-4 pb-14 pt-28 sm:pb-16">
+          <p className="text-xs uppercase tracking-[0.34em] text-gold [text-shadow:0_1px_10px_rgb(5_13_24/0.8)]">Honor of the Force</p>
           <div className="mt-5 h-px w-16 bg-gold" />
-          <h1 className="mt-6 max-w-4xl font-serif text-4xl uppercase leading-[0.95] tracking-wide sm:text-6xl lg:text-7xl">
+          <h1 className="mt-6 max-w-4xl font-serif text-4xl uppercase leading-[0.95] tracking-wide [text-shadow:0_2px_18px_rgb(5_13_24/0.85)] sm:text-6xl lg:text-7xl">
             Honoring the PA State Police
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-8 text-cream sm:text-xl">
+          <p className="mt-6 max-w-xl text-lg leading-8 text-cream [text-shadow:0_1px_12px_rgb(5_13_24/0.8)] sm:text-xl">
             Interviews with officers wounded in the line of duty, and with the families of officers who died while serving.
           </p>
-          <p className="mt-4 max-w-xl text-sm leading-6 text-cream/80">
+          <p className="mt-4 max-w-xl text-sm leading-6 text-cream/80 [text-shadow:0_1px_10px_rgb(5_13_24/0.8)]">
             An independent documentary demonstration. Not operated or endorsed by the Pennsylvania State Police.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -35,25 +44,15 @@ export default function HomePage() {
           </div>
           <p className="mt-8 max-w-xl text-[0.68rem] uppercase leading-5 tracking-[0.14em] text-gold-soft/90">
             Illustrative photograph ·{" "}
-            <a className="underline decoration-gold/50 underline-offset-2" href={gallery.pspRoad.sourceHref}>
-              {gallery.pspRoad.credit}
+            <a className="underline decoration-gold/50 underline-offset-2" href="https://commons.wikimedia.org/wiki/File:Pennsylvania_State_Police_Ford_Interceptor_Utility.jpg">
+              Raymond Wambsgans
             </a>
             {" · "}
-            <a className="underline decoration-gold/50 underline-offset-2" href={gallery.pspRoad.license.href}>
-              {gallery.pspRoad.license.name}
+            <a className="underline decoration-gold/50 underline-offset-2" href="https://creativecommons.org/licenses/by-sa/2.0/">
+              CC BY-SA 2.0
             </a>
             {" · Not an officer from these samples"}
           </p>
-        </div>
-        <div className="relative order-1 h-[42vh] min-h-[16rem] md:order-2 md:h-auto">
-          <Image
-            src={gallery.pspRoad.src}
-            alt={gallery.pspRoad.alt}
-            fill
-            priority
-            sizes="(min-width: 768px) 42vw, 100vw"
-            className={gallery.pspRoad.position}
-          />
         </div>
       </section>
 
