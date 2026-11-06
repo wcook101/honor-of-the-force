@@ -19,18 +19,20 @@ export default function HomePage() {
           fill
           priority
           sizes="100vw"
-          className={`hero-drift object-cover ${gallery.patrol.position}`}
+          className={`hero-drift object-cover brightness-110 ${gallery.patrol.position}`}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/80 to-navy/25" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-navy-deep/40" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-navy-deep/35 via-50% to-transparent" />
         <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-end px-4 pb-16 pt-28 sm:pb-20">
-          <p className="text-xs uppercase tracking-[0.34em] text-gold">A state police documentary</p>
+          <p className="text-xs uppercase tracking-[0.34em] text-gold [text-shadow:0_1px_10px_rgb(5_13_24/0.8)]">Honor of the Force</p>
           <div className="mt-5 h-px w-16 bg-gold" />
-          <h1 className="mt-6 max-w-4xl font-serif text-6xl leading-[0.9] sm:text-7xl lg:text-8xl">
-            Honor of the Force
+          <h1 className="mt-6 max-w-4xl font-serif text-4xl uppercase leading-[0.95] tracking-wide [text-shadow:0_2px_18px_rgb(5_13_24/0.85)] sm:text-6xl lg:text-7xl">
+            Honoring the PA State Police
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-8 text-cream/85 sm:text-xl">
-            Interviews with officers wounded in the line of duty, and with the families of officers who died while serving. The films ask what changed after the uniform came home, or did not.
+          <p className="mt-6 max-w-xl text-lg leading-8 text-cream [text-shadow:0_1px_12px_rgb(5_13_24/0.8)] sm:text-xl">
+            Interviews with officers wounded in the line of duty, and with the families of officers who died while serving.
+          </p>
+          <p className="mt-4 max-w-xl text-sm leading-6 text-cream/80 [text-shadow:0_1px_10px_rgb(5_13_24/0.8)]">
+            An independent documentary demonstration. Not operated or endorsed by the Pennsylvania State Police.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link href="/stories" className="bg-gold px-6 py-3 text-center text-sm font-semibold text-navy-deep">
