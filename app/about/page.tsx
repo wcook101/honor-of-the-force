@@ -15,7 +15,8 @@ export default function AboutPage() {
         kicker="About"
         title="A place for the interviews to live"
         lede="A visitor should be able to find a person, watch the conversation, and understand how the event changed the people around it."
-        frame={gallery.field}
+        frame={gallery.pspRural}
+        daylight
       />
       <section className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr]">
@@ -30,7 +31,7 @@ export default function AboutPage() {
               This preview shows the structure: a homepage, a filterable library, individual story pages, a memorial chapter, a recovery chapter, and a contact point. It does not represent a real agency, and it does not use an official seal.
             </p>
             <p>
-              Photographs throughout the site are downloaded from Pexels under the Pexels License. They illustrate patrol, remembrance, recovery, and family life. They are not pictures of the fictional people in the scripts, and they are not records of real interviews.
+              Photographs throughout the site are licensed illustrations of patrol, remembrance, recovery, and family life. They are not pictures of the fictional people in the scripts, and they are not records of real interviews. The patrol photograph is not an endorsement by the Pennsylvania State Police.
             </p>
           </div>
           <aside className="h-fit bg-white p-7 shadow-[0_20px_50px_rgb(12_27_48/0.06)]">

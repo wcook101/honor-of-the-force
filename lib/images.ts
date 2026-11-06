@@ -5,6 +5,8 @@ export type Frame = {
   alt: string;
   credit: string;
   position?: string;
+  sourceHref?: string;
+  license?: { name: string; href: string };
 };
 
 const note = "Licensed illustrative photograph. Not a person in these fictional samples.";
@@ -21,6 +23,14 @@ export const gallery = {
     alt: `${note} A marked Pennsylvania State Police vehicle. The photograph is not a portrait of anyone in these samples.`,
     credit: "Raymond Wambsgans / CC BY-SA 2.0",
     position: "object-[center_58%]",
+  },
+  pspRural: {
+    src: "/images/psp-rural-taurus.jpg",
+    alt: `${note} A marked Pennsylvania State Police sedan beside pasture and a split-rail fence in Pennsylvania.`,
+    credit: "Msmith8126",
+    position: "object-[60%_center] md:object-[center_58%]",
+    sourceHref: "https://commons.wikimedia.org/wiki/File:White_PA_State_Police_Taurus.jpg",
+    license: { name: "CC BY-SA 4.0", href: "https://creativecommons.org/licenses/by-sa/4.0" },
   },
   desert: {
     src: "/images/desert-road.jpg",
